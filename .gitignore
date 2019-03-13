@@ -1,2 +1,5 @@
 ###### add ignore by Jason ##########
 /.idea
+/cn/ucaner/github/build/
+/cn/ucaner/github/dist/
+/cn/ucaner/github/wether.spec
