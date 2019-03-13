@@ -3,3 +3,8 @@
 /cn/ucaner/github/build/
 /cn/ucaner/github/dist/
 /cn/ucaner/github/wether.spec
+
+#小猪佩奇打包exe文件忽略
+/cn/ucaner/peppapig/peppa.spec
+/cn/ucaner/peppapig/dist/
+/cn/ucaner/peppapig/build/
