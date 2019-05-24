@@ -26,5 +26,3 @@ print(gcd(m, n))
 print(lcm(m, n))
 
 
-
-
