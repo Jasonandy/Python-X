@@ -6,8 +6,9 @@ from tkinter import messagebox
 
 root = Tk()
 
+
 # 获取天气信息
-def wether():
+def weather():
     # 输入窗口
     root.title('天气查询 By Jason')  # 窗口标题
     Label(root, text='请输入城市').grid(row=0, column=0)  # 设置标签并调整位置
@@ -30,6 +31,7 @@ def wether():
         weather_data = gzip.decompress(weather_data).decode('utf-8')
         # 解压网页数据
         weather_dict = json.loads(weather_data)
+        print(weather_dict)
         # 将json数据转换为dict数据
         if weather_dict.get('desc') == 'invilad-citykey':
             print(messagebox.askokcancel("xing", "你输入的城市名有误，或者天气中心未收录你所在城市"))
@@ -45,16 +47,17 @@ def wether():
         root1.title(city_name + '天气状况')  # 副窗口标题
 
         # 设置日期列表
-        for i in range(5):  # 将每一天的数据放入列表中
-            LANGS = [(forecast[i].get('date'), '日期'),
+        # 将每一天的数据放入列表中
+        for i in range(5):
+            langs = [(forecast[i].get('date'), '日期'),
                      (forecast[i].get('fengxiang'), '风向'),
-                     #(str(forecast[i].get('fengji')), '风级'),
+                     # (str(forecast[i].get('fengji')), '风级'),
                      (forecast[i].get('high'), '最高温'),
                      (forecast[i].get('low'), '最低温'),
                      (forecast[i].get('type'), '天气')]
             group = LabelFrame(root1, text='天气状况 ', padx=0, pady=0)  # 框架
             group.pack(padx=11, pady=0, side=LEFT)  # 放置框架
-            for lang, value in LANGS:  # 将数据放入框架中
+            for lang, value in langs:  # 将数据放入框架中
                 c = Label(group, text=value + ': ' + lang)
                 c.pack(anchor=W)
         Label(root1, text='今日' + weather_dict.get('data').get('ganmao'), fg='green').place(x=40, y=20, height=40)  # 温馨提示
@@ -72,4 +75,4 @@ def wether():
 
 
 if __name__ == '__main__':
-    wether()
+    weather()
