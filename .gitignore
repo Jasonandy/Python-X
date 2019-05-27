@@ -1,5 +1,6 @@
 ###### add ignore by Jason ##########
 /.idea
+
 /cn/ucaner/github/build/
 /cn/ucaner/github/dist/
 /cn/ucaner/github/wether.spec
@@ -8,3 +9,14 @@
 /cn/ucaner/peppapig/peppa.spec
 /cn/ucaner/peppapig/dist/
 /cn/ucaner/peppapig/build/
+
+# 微信生成报告数据忽略
+/cn/wechatreport/data/
+/cn/wechatreport/image/
+/cn/wechatreport/微信个人数据报告.html
+
+# 环境
+/venv/
+###### add ignore by Jason ##########
+
+
