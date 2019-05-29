@@ -1,6 +1,5 @@
 import requests
 from datetime import datetime
-import yaml
 from bs4 import BeautifulSoup
 import itchat
 from apscheduler.schedulers.blocking import BlockingScheduler

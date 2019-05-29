@@ -2,11 +2,10 @@
 """
 
 """
-import itchat, re
+import itchat
+import re
 from itchat.content import *
 import random
-import json
-
 """
     Constants
 """
@@ -51,5 +50,6 @@ def text_reply(msg):
             print('-+-+'*5)
 
 
-itchat.auto_login(enableCmdQR=True, hotReload=True)
-itchat.run()
+if __name__ == '__main__':
+    itchat.auto_login(enableCmdQR=True, hotReload=True)
+    itchat.run()
