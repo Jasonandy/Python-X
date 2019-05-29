@@ -26,7 +26,7 @@ class gfweather:
         '''
         with open('_config.yaml', 'r', encoding='utf-8') as f:
             # yaml.load(f, Loader=yaml.FullLoader)
-            config = load(f, Loader=yaml.FullLoader)
+            config = load(f)
             print(config)
         alarm_timed = config.get('alarm_timed').strip()
         init_msg = f"每天定时发送时间：{alarm_timed}\n"

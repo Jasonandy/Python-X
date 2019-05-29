@@ -17,10 +17,10 @@ import PIL.Image as Image
 import re
 import random
 import math
-from cv2 import CascadeClassifier
-from cv2 import imread
-from cv2 import cvtColor
-from cv2 import COLOR_BGR2GRAY
+from cv2.data import CascadeClassifier
+from cv2.data import imread
+from cv2.data import cvtColor
+from cv2.data import COLOR_BGR2GRAY
 
 # 引入打开文件所用的库
 # Window与Linux和Mac OSX有所不同
