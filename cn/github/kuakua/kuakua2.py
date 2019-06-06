@@ -128,6 +128,7 @@ def check_time(msg):
 # 监听获取消息
 @itchat.msg_register(TEXT, isGroupChat=True)
 def getNoteGroup(msg):
+    print(msg)
     if(msg['User']['NickName']==groupName):
         print('receive: %s ' % msg['Text'])
         print('from:%s ' % msg['ActualNickName'])
