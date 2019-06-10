@@ -14,7 +14,7 @@ r = sr.Recognizer()
 
 
 # 音频路径
-audio_path = sys.path[0]+'/media/Kalimba.mp3'
+audio_path = sys.path[0]+'/media/tianxiawushuang.wav'
 harvard = sr.AudioFile(audio_path)
 with harvard as source:
     # 去噪
@@ -25,6 +25,7 @@ with harvard as source:
 # 语音识别
 test = r.recognize_google(audio, language="cmn-Hans-CN", show_all=True)
 print(test)
+print(tf)
 
 # 分析语音
 flag = False
