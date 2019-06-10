@@ -5,6 +5,7 @@ import cv2
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 
+
 class plate_cnn_net:
     def __init__(self):
         self.img_w,self.img_h = 136,36
