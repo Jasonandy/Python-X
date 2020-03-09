@@ -62,7 +62,7 @@ def run(image_path):
 
 
 if __name__ == '__main__':
-    run("media/lena/lena.jpg")
+    # run("media/lena/lena.jpg")
     run("media/13.jpg")
 
 
