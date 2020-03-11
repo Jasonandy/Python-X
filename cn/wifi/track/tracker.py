@@ -22,7 +22,7 @@ def wifi_net(pass_wd):
         # 创建wifi链接文件
         profile = pywifi.Profile()
         # 网卡的名称
-        profile.ssid = 'ZGZX'
+        profile.ssid = 'HYW'
         # 网卡的开放
         profile.auth = const.AUTH_ALG_OPEN
         # 设置加密类型
