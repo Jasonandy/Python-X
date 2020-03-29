@@ -147,8 +147,8 @@ def FaceRec(data):
                     putText(输入图像，'所需添加的文字'，左上角的坐标，字体，字体大小，颜色，字体粗细)
                     '''
                     # text = str(names[params[0]]) + 'confidence:'+str(params[1])
-                    # print(text)
-                    cv2.putText(frame, names[params[0]], cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
+                    cv2.putText(frame, names[params[0]], (x, y - 20), cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
+                    # cv2.putText(frame, names[params[0]], cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
                 except:
                     continue
 
@@ -164,6 +164,6 @@ def FaceRec(data):
 if __name__ == '__main__':
     data = './data'
     # 先运行这个 输入名字 摄像头抓取人脸数据 存入指定的目录
-    # generator(data)
+    #generator(data)
     # 检验训练出来的结果
     FaceRec(data)
