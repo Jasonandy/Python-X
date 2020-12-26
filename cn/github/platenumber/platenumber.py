@@ -58,7 +58,7 @@ def findPlateNumberRegion(img):
         rect
 
         # box是四个点的坐标
-        box = cv2.cv.BoxPoints(rect)
+        box = cv2.BoxPoints(rect)
         box = np.int0(box)
 
         # 计算高和宽

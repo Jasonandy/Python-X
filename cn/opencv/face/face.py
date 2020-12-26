@@ -141,13 +141,13 @@ def FaceRec(data):
                     # resize（原图像，目标大小，（插值方法）interpolation=，）
                     roi_gray = cv2.resize(roi_gray, (92, 112), interpolation=cv2.INTER_LINEAR)
                     params = model.predict(roi_gray)
-                    print('Label:%s,confidence:%.2f' % (params[0], params[1]))
+                    print('人物标签:%s,可信度:%.2f' % (params[0], params[1]))
                     '''
                     putText:给照片添加文字
                     putText(输入图像，'所需添加的文字'，左上角的坐标，字体，字体大小，颜色，字体粗细)
                     '''
                     # text = str(names[params[0]]) + 'confidence:'+str(params[1])
-                    cv2.putText(frame, names[params[0]], (x, y - 20), cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
+                    cv2.putText(frame, names[params[0]], (x, y - 20), cv2.FONT_HERSHEY_TRIPLEX, 1, 255, 2)
                     # cv2.putText(frame, names[params[0]], cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
                 except:
                     continue
@@ -164,6 +164,8 @@ def FaceRec(data):
 if __name__ == '__main__':
     data = './data'
     # 先运行这个 输入名字 摄像头抓取人脸数据 存入指定的目录
+    # 1.录入人脸数据
     #generator(data)
     # 检验训练出来的结果
+    # 2.实现校验匹配
     FaceRec(data)

@@ -292,7 +292,8 @@ class YZM(object):
 
 def main():
     print('=== 开始识别验证码 ===')
-    YZM('7364.jpg').getyzm()
+    yzm = YZM('7364.jpg').getyzm()
+    print(yzm)
     print('=== end ===')
 
 
