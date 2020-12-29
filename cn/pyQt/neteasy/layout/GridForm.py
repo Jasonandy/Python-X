@@ -31,7 +31,7 @@ class GridForm(QWidget) :
         grid.addWidget(authorEdit,2,1)
 
         grid.addWidget(contentLabel,3,0)
-        grid.addWidget(contentEdit,3,1,5,1)
+        grid.addWidget(contentEdit,3,1,10,1)
 
         self.setLayout(grid)
         self.resize(350,300)

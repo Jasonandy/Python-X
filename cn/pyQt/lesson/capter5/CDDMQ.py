@@ -193,7 +193,7 @@ class Ui_MainWindow(object):
         txt_file_name_class = txt_file_name_list[-1].split(".")[0]
         print(txt_file_name_list[-1].split(".")[0])
         # 将文本里的数据 逐行读取 然后存入sql.lite数据库
-        for line in open(txt_file_name):
+        for line in open(txt_file_name, encoding = 'utf-8'):
             insert_stu_info_str = 'insert into people values'+'(NULL,'+line+','+txt_file_name_class+')'
             query.exec(insert_stu_info_str)
             print(insert_stu_info_str)
