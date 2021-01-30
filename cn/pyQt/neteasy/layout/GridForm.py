@@ -24,8 +24,8 @@ class GridForm(QWidget) :
         grid = QGridLayout()
         grid.setSpacing(10)
 
-        grid.addWidget(titleLabel,1,0)
-        grid.addWidget(titleEdit,1,1)
+        grid.addWidget(titleLabel, 1, 0)
+        grid.addWidget(titleEdit, 1, 1)
 
         grid.addWidget(authorLabel,2,0)
         grid.addWidget(authorEdit,2,1)

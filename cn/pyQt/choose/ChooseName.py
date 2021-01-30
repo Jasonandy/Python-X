@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPalette, QBrush, QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
 from pyQt.choose.ChooseNameUi import ChooseNameMainUi
@@ -36,11 +36,15 @@ if __name__ == '__main__':
     # main_ui.set_up_ui(choose_name_main_window)
     # 设置窗口坐标
     # self.setGeometry(300, 300, 250, 250)
-    choose_name_main_window.resize(600, 400)
+    choose_name_main_window.resize(800, 500)
     # 设置主窗口的标题
     choose_name_main_window.setWindowTitle('楚大点名器   --- 湘北名校 楚雄中学 Made by 佛系小吴')
     # 设置窗口图标
     choose_name_main_window.setWindowIcon(QIcon('./img/icon/logo.svg'))
+    choose_name_palette = QPalette()
+    choose_name_pix = QPixmap('./img/bg/bg.png').scaled(choose_name_main_window.width(), choose_name_main_window.height())
+    choose_name_palette.setBrush(QPalette.Background, QBrush(choose_name_pix))
+    choose_name_main_window.setPalette(choose_name_palette)
     # show 显示窗口
     choose_name_main_window.show()
     sys.exit(app.exec_())

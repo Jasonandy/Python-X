@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actiondaoru"/>
+    <addaction name="separator"/>
+    <addaction name="actionqingkong"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>关于作者</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionruanjian"/>
+    <addaction name="separator"/>
+    <addaction name="actionzuozhe"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actiondaoru">
+   <property name="text">
+    <string>导入数据</string>
+   </property>
+  </action>
+  <action name="actionqingkong">
+   <property name="text">
+    <string>清空数据</string>
+   </property>
+  </action>
+  <action name="actionruanjian">
+   <property name="text">
+    <string>软件信息 </string>
+   </property>
+   <property name="statusTip">
+    <string>查看软件信息</string>
+   </property>
+   <property name="whatsThis">
+    <string>点击查看软件信息</string>
+   </property>
+  </action>
+  <action name="actionzuozhe">
+   <property name="text">
+    <string>作者信息</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
